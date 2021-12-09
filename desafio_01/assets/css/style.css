@@ -1,0 +1,94 @@
+:root {
+  --roxo-color-: #574ae8;
+  --gray-dark-color-: #475461;
+  --gray-medium-color-: #b6b6b6;
+  --gray-light-color-: #f3f5f7;
+  --white-color-: #fff;
+  --gradiente-bg-: linear-gradient(90deg, #574ae8, #3ea1db);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  /* outline: 1px solid red; */
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--gray-light-color-);
+}
+
+header {
+  width: 100%;
+  height: 250px;
+  background-image: var(--gradiente-bg-);
+}
+header a {
+  color: var(--white-color-);
+}
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav {
+  padding-top: 41px;
+  padding-bottom: 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input {
+  width: 100%;
+  height: 65px;
+  padding: 41px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2) url(../img/lupa.svg) center / contain
+    no-repeat;
+  background-size: 24px 24px;
+  background-position: 10px center;
+  font-size: 1.125rem;
+  color: var(--white-color-);
+  position: relative;
+}
+
+input::placeholder {
+  color: var(--white-color-);
+}
+.box {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: var(--white-color-);
+}
+.box:last-child {
+  margin-bottom: 20px;
+}
+
+.box ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+.heart-color {
+  fill: red;
+}
+
+.box span {
+  color: var(--gray-medium-color-);
+}
+
+.box h2 {
+  font-size: 1.625rem;
+  color: var(--gray-dark-color-);
+}
+.box p {
+  margin-top: 15px;
+  font-size: 1.125rem;
+  color: var(--gray-medium-color-);
+  line-height: 32px;
+}
