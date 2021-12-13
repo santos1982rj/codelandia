@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/*Variáveis*/
+:root {
+  --bgSite: #d7d4ff;
+  --buttonColor: #6c63ff;
+
+  --white: #ffffff;
+  --white300: #f9f9f9;
+
+  --title: #2b2b2b;
+  --text: #555555;
+  --font: 'Merriweather', serif;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input {
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+.title {
+  font-family: 'Merriweather', serif;
+  color: var(--title);
+}
+.text {
+  font-family: 'lato', sans-serif;
+  color: var(--text);
+}
+.container {
+  width: 90%;
+  max-width: 1240px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: auto;
+}
+
+.hero {
+  background-color: var(--bgSite);
+  width: 100%;
+  padding: 70px 0;
+}
+
+.hero .cto {
+  width: 100%;
+
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 30px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+
+  flex-basis: 5;
+}
+
+.hero .title {
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 4.7rem;
+}
+
+.hero .text {
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+}
+
+.hero button {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: var(--buttonColor);
+  color: var(--white);
+}
+
+.services {
+  padding: 100px 0;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 60px;
+}
+.card {
+  width: 100%;
+}
+.card img {
+  display: block;
+  max-width: 100%;
+}
+/* .card {
+} */
+.content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content .text {
+  font-size: 1.8rem;
+}
+
+.contact {
+  background-color: var(--bgSite);
+  width: 100%;
+  padding: 70px 0;
+}
+.contact .container {
+  flex-direction: column;
+  gap: 20px;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 470px;
+}
+
+form input {
+  width: 100%;
+  display: block;
+  height: 65px;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+form textarea {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  resize: none;
+  padding: 15px;
+}
+
+form button {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: var(--buttonColor);
+  color: var(--white300);
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 0px 5px 5px rgba(23, 23, 23, 0.1);
+}
+
+@media (max-width: 900px) {
+  .hero .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .cto {
+    order: 2;
+  }
+  .hero .title {
+    font-size: 3.2rem;
+  }
+
+  .cards {
+    grid-gap: 20px;
+  }
+  .services {
+    padding: 50px 0;
+  }
+}
