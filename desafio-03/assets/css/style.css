@@ -97,8 +97,6 @@ input:focus {
   width: 100%;
   max-width: 500px;
   display: block;
-
-  flex-basis: 5;
 }
 
 .hero .title {
