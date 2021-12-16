@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather&display=swap');
+
+/*Variáveis*/
+:root {
+  --green: #04c35c;
+  --blue: #1a202c;
+
+  --white: #ffffff;
+  --white300: #f7fafc;
+
+  --dark: #1a202c;
+  --input: #e8e8e8;
+
+  --lato: 'Lato', sans-serif;
+  --merri: 'Merriweather', serif;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid tomato; */
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input {
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+/*page login*/
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box-01 {
+  background-color: var(--white300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-01 img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.box-02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-02 p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: var(--merri);
+  line-height: 2rem;
+  margin-bottom: 5px;
+}
+
+.box-02 h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  font-family: var(--merri);
+  line-height: 3.5rem;
+  margin-bottom: 40px;
+}
+
+.form form {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input[type='email'],
+input[type='password'] {
+  height: 50px;
+  display: block;
+  width: 100%;
+  max-width: 350px;
+
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+}
+
+.form label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: var(--lato);
+  line-height: 2rem;
+  margin-bottom: 5px;
+}
+
+.form .submit {
+  display: block;
+
+  width: 100%;
+  height: 50px;
+
+  background: var(--green);
+  border-radius: 5px;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.form .google {
+  display: block;
+
+  width: 100%;
+  height: 50px;
+
+  position: relative;
+
+  background: var(--blue);
+  border-radius: 5px;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  padding: 0 15px;
+}
+
+.form .google img {
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .box-01 {
+    display: none;
+  }
+}
