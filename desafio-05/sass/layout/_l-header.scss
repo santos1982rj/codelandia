@@ -1,0 +1,23 @@
+$component-name: 'l-header';
+
+.#{$component-name} {
+  &__logo {
+    width: rem(100);
+    height: auto;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $global-module-size;
+  }
+  &__nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: $global-module-size;
+  }
+  &__nav ul li {
+    list-style: none;
+  }
+}
