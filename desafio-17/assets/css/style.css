@@ -1,0 +1,163 @@
+/* reset */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  /* border: 1px dotted tomato; */
+}
+/* VARIABLES */
+:where(html) {
+  --color-white-: #f9f9f9;
+  --color-orange-: #ffa634;
+  --color-darkGray-: #181818;
+  /* background: linear-gradient(
+    180deg,
+    rgba(24, 24, 24, 0) 0%,
+    rgba(24, 24, 24, 0.8) 80.79%
+  );
+  background: linear-gradient(
+    269.66deg,
+    #121214 3.45%,
+    rgba(18, 18, 20, 0) 96.65%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 24, 0) 37.05%,
+    rgba(24, 24, 24, 0.8) 117.83%
+  );
+  background: linear-gradient(
+    269.87deg,
+    #1d1d1d 4.67%,
+    rgba(29, 29, 29, 0) 101.21%
+  );
+  background: linear-gradient(
+    269.55deg,
+    #1d1d1d 6.76%,
+    rgba(29, 29, 29, 0) 96.54%
+  ); */
+}
+
+.checked {
+  color: var(--color-orange-);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.l-header {
+  /* position: absolute; */
+  width: 100%;
+}
+
+.l-header__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px 20px;
+
+  background: none;
+}
+
+.l-header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.l-header__item a {
+  color: var(--color-white-);
+}
+.l-hero {
+  height: 100vh;
+  padding: 70px 0;
+  background: linear-gradient(
+      180deg,
+      rgba(24, 24, 24, 0) 25%,
+      rgba(24, 24, 24, 1) 75%
+    ),
+    url(../img/bg-batman.jpg) no-repeat center center/cover;
+}
+
+.l-hero__content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.l-hero__tag {
+  color: var(--color-orange-);
+  background-color: var(--color-darkGray-);
+  padding: 4px 8px;
+}
+
+.l-hero__rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.l-hero__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.l-hero__box {
+  width: 300px;
+  height: 440px;
+}
+.filme01 {
+  background: linear-gradient(
+      180deg,
+      rgba(24, 24, 24, 0) 0%,
+      rgba(24, 24, 24, 0.8) 80.79%
+    ),
+    url(../img/Shang-Chi.jpg) no-repeat center center/cover;
+}
+.filme02 {
+  background: linear-gradient(
+      180deg,
+      rgba(24, 24, 24, 0) 0%,
+      rgba(24, 24, 24, 0.8) 80.79%
+    ),
+    url(../img/wisa-dragon.jpg) no-repeat center center/cover;
+}
+
+.filme03 {
+  background: linear-gradient(
+      180deg,
+      rgba(24, 24, 24, 0) 0%,
+      rgba(24, 24, 24, 0.8) 80.79%
+    ),
+    url(../img/loki.png) no-repeat center center/cover;
+}
+.filme04 {
+  background: linear-gradient(
+      180deg,
+      rgba(24, 24, 24, 0) 0%,
+      rgba(24, 24, 24, 0.8) 80.79%
+    ),
+    url(../img/spider-man.png) no-repeat center center/cover;
+}
+.filme05 {
+  background: linear-gradient(
+      180deg,
+      rgba(24, 24, 24, 0) 0%,
+      rgba(24, 24, 24, 0.8) 80.79%
+    ),
+    url(../img/the-witcher.jpg) no-repeat center center/cover;
+}

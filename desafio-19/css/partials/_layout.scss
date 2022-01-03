@@ -1,0 +1,370 @@
+// Container devices
+$container-xl: 1440px;
+$container-lg: 1140px;
+$container-md: 960px;
+$container-sm: 540px;
+
+// Mixins of media query
+@mixin responsive($device) {
+  @if $device == xl {
+    // For resolutions higher than 1440px
+    @media screen and (min-width: $container-xl) {
+      @content;
+    }
+  } @else if $device == lg {
+    // For resolutions between 1140px and 1440px
+    @media screen and (max-width: $container-xl) and (min-width: $container-lg) {
+      @content;
+    }
+  } @else if $device == md {
+    // For resolutions between 960px and 1140px
+    @media screen and (max-width: $container-lg) and (min-width: $container-md) {
+      @content;
+    }
+  } @else if $device == sm {
+    // For resolutions lower than 960px
+    @media screen and (max-width: $container-md) {
+      @content;
+    }
+  } @else if $device == xs {
+    // For resolutions lower than 540px
+    @media screen and (max-width: $container-sm) {
+      @content;
+    }
+  }
+}
+
+.container {
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+
+  @include responsive(sm) {
+    flex-direction: column;
+    padding: 16px 18px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-item-1 {
+  flex: 1 1 360px;
+}
+
+.flex-item-2 {
+  flex: 2 1 360px;
+}
+
+.flex-item-3 {
+  flex: 3 1 360px;
+}
+
+.flex-item-4 {
+  flex: 4 1 360px;
+}
+
+.flex-item-5 {
+  flex: 4 1 360px;
+}
+
+.flex-item-auto {
+  flex: 2 1 auto;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 72px;
+
+  background-color: $white-normal;
+  box-shadow: none;
+}
+
+//NAVBAR DESKTOP
+
+.navbar-desktop {
+  max-width: $container-xl;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .navbar-desktop-item-1 {
+//   flex: 1 1 auto;
+// }
+
+// .navbar-desktop-item-2 {
+//   flex: 1 1 auto;
+// }
+
+.menu-desktop {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .menu-item {
+    margin-left: 16px;
+    a {
+      text-decoration: none;
+      color: $gray-normal;
+    }
+  }
+}
+
+.btn {
+  text-decoration: none;
+  background-color: $primary-color;
+  padding: 16px 24px;
+  border-radius: 10px;
+  color: $white-normal;
+  display: inline-block;
+  border: 0;
+}
+
+$component-name: 'l-hero';
+
+.#{$component-name} {
+  background-color: $secondary-color;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.l-function.container {
+  padding: 56px 24px;
+}
+
+$component-name1: 'l-function';
+
+.#{$component-name1} {
+  flex-direction: column;
+  gap: 80px;
+  &__box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include responsive(sm) {
+      flex-direction: column;
+      gap: 48px;
+    }
+  }
+  &__box-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+}
+.l-app__content.container {
+  padding: 56px 24px;
+}
+$component-name2: 'l-app';
+
+.#{$component-name2} {
+  background-color: $secondary-color;
+
+  &__info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+
+    h2 {
+      font-size: rem(28);
+    }
+    @include responsive(sm) {
+      align-items: center;
+    }
+  }
+  &__download {
+    text-align: left;
+    display: flex;
+    gap: 16px;
+  }
+  &__illustration {
+    flex: 1;
+  }
+}
+
+.bg-blue {
+  background-color: $secondary-color;
+}
+.bg-dark {
+  background-color: $gray-dark;
+  color: $secondary-color !important;
+}
+
+.l-plans__content.container {
+  padding: 56px 24px;
+  flex-direction: column;
+  gap: 52px;
+}
+
+$component-name3: 'l-plans';
+
+.#{$component-name3} {
+  &__plan {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  &__box {
+    flex: 1 1 320px;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 52px 32px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    border-radius: 8px;
+  }
+
+  &__box .price {
+    font-weight: 600;
+    font-size: rem(50);
+  }
+
+  &__box .price sup {
+    font-weight: 600;
+    font-size: rem(20);
+  }
+  &__box .price span {
+    font-weight: 600;
+    font-size: rem(20);
+  }
+}
+
+.preffer h2 {
+  color: $secondary-color;
+}
+.preffer p {
+  color: $secondary-color;
+}
+
+.btn-2 {
+  padding: 5px 32px;
+  border-radius: 15px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-decoration: none;
+  font-weight: 600;
+}
+.l-contact__content.container {
+  padding: 56px 24px;
+  flex-direction: column;
+  gap: 52px;
+}
+
+$component-name4: 'l-contact';
+
+.#{$component-name4} {
+  background-image: linear-gradient(
+      180deg,
+      rgba(41, 49, 69, 0.5) 0%,
+      rgba(41, 49, 69, 0.5) 100%
+    ),
+    url(./../../img/bg-contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2,
+  p {
+    color: $secondary-color;
+  }
+
+  &__form {
+    input {
+      background: transparent;
+      width: 300px;
+      padding: 16px 0;
+      border: 0;
+      border-bottom: 1px solid $secondary-color;
+      margin-right: 16px;
+
+      &::placeholder {
+        color: $secondary-color;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+      }
+    }
+  }
+}
