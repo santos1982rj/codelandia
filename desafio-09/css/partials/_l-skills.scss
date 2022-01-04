@@ -1,6 +1,36 @@
-$component-name: 'l-skills';
+$component-name: 'l-skill';
 
 .#{$component-name} {
   width: 100%;
   padding: 32px 0;
+  &__content {
+    width: 100%;
+    flex-direction: column;
+    gap: 32px;
+
+    h2 {
+      color: $white-normal;
+    }
+  }
+  &__menu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 51px;
+  }
+  &__item {
+    background-color: $gray-dark;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fab {
+      color: $primary-color;
+      font-size: 72px;
+    }
+  }
 }
