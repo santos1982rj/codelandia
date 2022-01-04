@@ -1,0 +1,101 @@
+@mixin typeface-1($size, $device: desktop) {
+  font-family: 'DM Sans', sans-serif;
+
+  //H1
+
+  @if $size == h1 and $device == desktop {
+    font-size: rem(36);
+    line-height: 125%;
+  } @else if $size == h1 and $device == mobile {
+    font-size: rem(36);
+    line-height: 110%;
+  }
+
+  //H2
+
+  @else if $size == h2 and $device == desktop {
+    font-size: rem(32);
+    line-height: 120%;
+  } @else if $size == h2 and $device == mobile {
+    font-size: rem(32);
+    line-height: 120%;
+  }
+
+  //H3
+
+  @else if $size == h3 and $device == desktop {
+    font-size: rem(18);
+    line-height: 150%;
+  } @else if $size == h3 and $device == mobile {
+    font-size: rem(18);
+    line-height: 150%;
+  }
+}
+
+@mixin typeface-2($size, $device: desktop) {
+  font-family: 'DM Sans', sans-serif;
+
+  //P1
+
+  @if $size == p1 and $device == desktop {
+    font-size: rem(18);
+    line-height: 150%;
+  } @else if $size == p1 and $device == mobile {
+    font-size: rem(16);
+    line-height: 150%;
+  }
+
+  //P2
+
+  @else if $size == p2 and $device == desktop {
+    font-size: rem(18);
+    line-height: 150%;
+  } @else if $size == p2 and $device == mobile {
+    font-size: rem(16);
+    line-height: 150%;
+  }
+
+  //P3
+
+  @else if $size == p3 and $device == desktop {
+    font-size: rem(14);
+    line-height: 160%;
+  } @else if $size == p3 and $device == mobile {
+    font-size: rem(14);
+    line-height: 160%;
+  }
+}
+
+h1 {
+  @include typeface-1(h1, desktop);
+
+  @include responsive(sm) {
+    @include typeface-1(h1, mobile);
+  }
+}
+h2 {
+  @include typeface-1(h2, desktop);
+
+  @include responsive(sm) {
+    @include typeface-1(h2, mobile);
+  }
+}
+h3 {
+  color: $gray-dark;
+
+  @include typeface-1(h3, desktop);
+
+  @include responsive(sm) {
+    @include typeface-1(h3, mobile);
+  }
+}
+
+p {
+  color: $gray-dark;
+
+  @include typeface-2(p1, desktop);
+
+  @include responsive(sm) {
+    @include typeface-2(p1, mobile);
+  }
+}

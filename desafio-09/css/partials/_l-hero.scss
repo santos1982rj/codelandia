@@ -1,0 +1,51 @@
+$component-name: 'l-hero';
+
+.#{$component-name} {
+  &__content {
+    height: 100%;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include responsive(sm) {
+      text-align: center;
+      align-items: center;
+      order: 2;
+    }
+
+    h1 {
+      font-size: 72px;
+      line-height: 100%;
+      color: $white-normal;
+    }
+    p {
+      font-size: 24px;
+      color: $gray-light;
+      margin-bottom: 32px;
+    }
+  }
+  &__img {
+    flex: 2;
+    max-width: 500px;
+    margin: 32px 0;
+  }
+  &__btn {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .btn-cv {
+    background-color: $primary-color;
+    color: $black-normal;
+  }
+  .btn-contact {
+    background-color: transparent;
+    color: $white-normal;
+    border: 1px solid $gray-light;
+  }
+}

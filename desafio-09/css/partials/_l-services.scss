@@ -1,0 +1,49 @@
+$component-name: 'l-services';
+
+.#{$component-name} {
+  width: 100%;
+  padding: 32px 0;
+  &__content {
+    flex-direction: column;
+    gap: 32px;
+
+    h2 {
+      color: $white-normal;
+      font-weight: 700;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 45px;
+  }
+
+  &__card {
+    background-color: $gray-dark;
+    border-bottom: 5px solid $primary-color;
+    padding: 30px;
+    h2 {
+      color: $gray-light;
+      font-weight: 500;
+      max-inline-size: 130px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  &__icon {
+    width: 56px;
+    height: 56px;
+    .fab,
+    .far,
+    .fas {
+      font-size: 56px;
+      color: $primary-color;
+    }
+  }
+}

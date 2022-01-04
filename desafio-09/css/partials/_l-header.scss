@@ -1,0 +1,46 @@
+$component-name: 'l-header';
+
+.#{$component-name} {
+  &__nav {
+    height: 100px;
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    font-size: rem(26);
+    font-weight: 700;
+    color: $white-normal;
+
+    text-decoration: none;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: rem(18);
+    font-weight: 400;
+
+    list-style: none;
+  }
+
+  &__item {
+    a {
+      white-space: pre;
+      text-decoration: none;
+      color: $white-normal;
+
+      padding: 12px 24px;
+    }
+  }
+}

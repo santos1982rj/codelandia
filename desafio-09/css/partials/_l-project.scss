@@ -1,0 +1,40 @@
+$component-name: 'l-project';
+
+.#{$component-name} {
+  padding: 32px 0;
+  &__content {
+    flex-direction: column;
+    gap: 32px;
+
+    h2 {
+      color: $white-normal;
+      font-weight: 700;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 40px 32px;
+  }
+
+  &__card {
+    background-color: $gray-dark;
+    padding: 24px;
+
+    h4 {
+      margin: 16px 0 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: $white-normal;
+    }
+    span {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: $gray-light;
+    }
+  }
+}

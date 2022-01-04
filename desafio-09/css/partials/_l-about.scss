@@ -1,0 +1,68 @@
+$component-name: 'l-about';
+
+.#{$component-name} {
+  width: 100%;
+  padding: 32px 0;
+  &__content {
+    width: 100%;
+    flex-direction: column;
+    gap: 32px;
+
+    h2 {
+      color: $white-normal;
+      font-weight: 700;
+    }
+    p {
+      color: $gray-light;
+      max-inline-size: 700px;
+      text-align: center;
+
+      font-weight: 400;
+    }
+  }
+  &__contact {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 24px;
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+      color: $white-normal;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+
+      margin: 16px 0 5px;
+    }
+    span {
+      color: $gray-light;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  &__icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $gray-dark;
+    .fab,
+    .far,
+    .fas {
+      font-size: 32px;
+      color: $primary-color;
+    }
+  }
+}
