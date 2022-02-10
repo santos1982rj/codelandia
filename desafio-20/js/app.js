@@ -27,3 +27,12 @@ tabTitle.forEach((tab, index) => {
     tabTitle[index].classList.add('active');
   });
 });
+
+// Animation BG
+setTimeout(function () {
+  const teste = document.querySelectorAll('.vortex path');
+  teste.forEach((item, index) => {
+    teste[index].style.animationDelay += index * 0.1 + 's';
+    console.log(teste[index]);
+  });
+}, 500);
