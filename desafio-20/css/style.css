@@ -13,6 +13,16 @@
   --gradient2: linear-gradient(45deg, #ff5f6d 2.88%, #ffc371 100%);
 }
 
+.lighttheme {
+  --primary: #ffc371;
+  --color: #121212;
+  --color-200: #151515;
+  --main: #fff;
+  --main-200: #f3f4f8;
+  --gradient: linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%);
+  --gradient2: linear-gradient(45deg, #ff5f6d 2.88%, #ffc371 100%);
+}
+
 *,
 *::after,
 *::before {
@@ -102,6 +112,48 @@ section {
   padding: 6em 0;
 }
 
+.toggle-theme {
+  background: var(--gradient);
+  border-radius: 50%;
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  left: 2vh;
+  bottom: 2vh;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.toggle-theme svg {
+  position: relative;
+  z-index: 1000;
+  width: 32px;
+  height: 32px;
+  fill: #121212;
+}
+
+.scroll-top {
+  background: var(--gradient);
+  border-radius: 50%;
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  right: 2vh;
+  bottom: 2vh;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.scroll-top svg {
+  position: relative;
+  z-index: 1000;
+  width: 32px;
+  height: 32px;
+  fill: #121212;
+}
+
 .l-header {
   width: 100%;
   padding: 0 20px;
@@ -120,6 +172,11 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.l-header__nav--logo {
+  max-width: 250px;
 }
 .l-header__nav--list {
   display: -webkit-box;
@@ -172,6 +229,9 @@ section {
           transform-origin: bottom left;
 }
 
+.l-hero {
+  overflow: hidden;
+}
 .l-hero .container {
   height: 40vh;
 }
@@ -312,7 +372,7 @@ section {
   transition: -webkit-filter 0.3s ease-in-out;
   transition: filter 0.3s ease-in-out;
   transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
-  max-width: 350px;
+  max-width: 280px;
 }
 .l-about__perfil--img:hover {
   -webkit-filter: drop-shadow(10px 10px 10px var(--primary));
@@ -349,7 +409,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 32px;
+  gap: 16px;
   margin-bottom: 1.5rem;
 }
 .l-about__social svg {
@@ -363,7 +423,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 48px;
+  gap: 16px;
 }
 .l-about__btn .btn {
   display: -webkit-box;
@@ -775,7 +835,7 @@ section {
 }
 
 footer {
-  background-color: #090909;
+  background-color: var(--main-200);
 }
 footer .container {
   display: -webkit-box;
@@ -787,7 +847,7 @@ footer .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 20px;
   color: var(--color-200);
   font-size: 1rem;
   font-weight: 300;

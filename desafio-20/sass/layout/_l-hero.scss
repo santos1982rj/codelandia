@@ -1,6 +1,7 @@
 $component-name: 'l-hero';
 
 .#{$component-name} {
+  overflow: hidden;
   .container {
     height: 40vh;
   }

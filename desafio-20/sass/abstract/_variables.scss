@@ -1,6 +1,18 @@
 // ==============================
 // Colors
 // ==============================
+$light-colors: (
+  //PRIMARY COLOR
+  'primary': #ffc371,
+  //NEUTRAL COLORS
+  'color': #121212,
+  'color-200': #151515,
+  'main': #fff,
+  'main-200': #f3f4f8,
+  //GRADIENT
+  'gradient': linear-gradient(135deg, #ff5f6d 2.88%, #ffc371 100%),
+  'gradient2': linear-gradient(45deg, #ff5f6d 2.88%, #ffc371 100%)
+);
 
 $project-colors: (
   //PRIMARY COLOR

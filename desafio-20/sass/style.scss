@@ -8,6 +8,11 @@
     --#{$name}: #{$color};
   }
 }
+.lighttheme {
+  @each $name, $color in $light-colors {
+    --#{$name}: #{$color};
+  }
+}
 
 @import 'base/reset';
 @import 'base/typography';
@@ -52,6 +57,56 @@ section {
   padding: 6em 0;
 }
 
+.toggle-theme {
+  background: var(--gradient);
+  border-radius: 50%;
+
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  left: 2vh;
+  bottom: 2vh;
+  z-index: 999;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  svg {
+    position: relative;
+    z-index: 1000;
+    width: 32px;
+    height: 32px;
+    fill: #121212;
+  }
+}
+
+.scroll-top {
+  background: var(--gradient);
+  border-radius: 50%;
+
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  right: 2vh;
+  bottom: 2vh;
+  z-index: 999;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  svg {
+    position: relative;
+    z-index: 1000;
+    width: 32px;
+    height: 32px;
+    fill: #121212;
+  }
+}
+
 @import 'layout/l-header';
 @import 'layout/l-hero';
 @import 'layout/l-about';
@@ -60,13 +115,13 @@ section {
 @import 'layout/l-contact';
 
 footer {
-  background-color: #090909;
+  background-color: var(--main-200);
 
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 20px;
 
     color: var(--color-200);
     font-size: rem(16);

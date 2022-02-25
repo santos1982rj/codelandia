@@ -13,7 +13,10 @@ $component-name: 'l-header';
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    flex-wrap: wrap;
+    &--logo {
+      max-width: 250px;
+    }
     &--list {
       display: flex;
       justify-content: space-around;

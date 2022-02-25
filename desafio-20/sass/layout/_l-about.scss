@@ -7,7 +7,7 @@ $component-name: 'l-about';
     border-radius: 4px;
     background: var(--gradient);
     transition: filter 0.3s ease-in-out;
-    max-width: 350px;
+    max-width: 280px;
 
     &:hover {
       filter: drop-shadow(10px 10px 10px var(--primary));
@@ -34,7 +34,7 @@ $component-name: 'l-about';
   &__social {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 16px;
     margin-bottom: rem(24);
 
     svg {
@@ -46,7 +46,7 @@ $component-name: 'l-about';
   &__btn {
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 16px;
 
     .btn {
       display: flex;
