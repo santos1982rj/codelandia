@@ -1,0 +1,102 @@
+$component-name: 'l-experiencia';
+
+.#{$component-name} {
+  .container.grid {
+    gap: 64px;
+  }
+  h2 {
+    color: var(--color);
+    grid-column: 1 / -1;
+  }
+
+  .tab__container {
+    position: relative;
+
+    .tab__item {
+      display: grid;
+      grid-template-columns: 3fr 9fr;
+      @include media('<SMdesktop') {
+        grid-template-columns: 1fr;
+      }
+
+      &--title {
+        color: var(--color-200);
+        padding: 1rem 2rem;
+        border-left: 5px solid var(--primary);
+
+        transition: border 0.3s ease-in-out;
+
+        &:hover {
+          border-left: 5px solid var(--primary);
+          border-image: var(--gradient);
+          border-image-slice: 1;
+          background-color: var(--main-200);
+        }
+        &.active {
+          border-image: var(--gradient);
+          border-image-slice: 1;
+          background-color: var(--main-200);
+        }
+      }
+      &--panel {
+        display: none;
+        padding: 1rem;
+
+        &.active {
+          display: block;
+        }
+      }
+      &--info {
+        position: absolute;
+        top: 0;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 32px;
+        opacity: 1;
+        animation: fadeIn 1s ease-in 1;
+        @include media('<SMdesktop') {
+          position: relative;
+        }
+      }
+      &--office {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color);
+
+        h2 {
+          font-weight: 500;
+        }
+        span {
+          font-size: rem(16);
+          font-weight: 500;
+        }
+      }
+      .company {
+        color: transparent;
+        font-size: rem(16);
+        background: var(--gradient);
+        background-clip: text;
+      }
+      p {
+        color: var(--color);
+        font-size: rem(18);
+        font-weight: 300;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

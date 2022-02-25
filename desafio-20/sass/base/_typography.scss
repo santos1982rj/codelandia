@@ -1,0 +1,53 @@
+/// @author Vinicius Santos
+
+// Arquivo para utilização de fonts responsivas;
+
+@function construtorClamp(
+  $minWidthPx,
+  $maxWidthPx,
+  $minFontSize,
+  $maxFontSize
+) {
+  //converte Tamanho minimo da janela em rem
+  $minWidthRem: $minWidthPx / 16;
+
+  //converte Tamanho máximo da janela em rem
+  $maxWidthRem: $maxWidthPx / 16;
+
+  //converte Tamanho minimo da font em rem
+  $minFontRem: $minFontSize / 16;
+
+  //converte Tamanho máximo da janela em rem
+  $maxFontRem: $maxFontSize / 16;
+
+  // Calculo para achar a inclinação em grafico com dois eixos Y/X
+  $inclinacao: ($maxFontRem - $minFontRem) / ($maxWidthRem - $minWidthRem);
+
+  //Calcula a interseção dos pontos no gráfico
+  $intersecaoEixoY: (-$minWidthRem * $inclinacao) + $minFontRem;
+
+  //calcula valor preferencial
+  $valorPreferencial: #{$intersecaoEixoY}rem '+' #{$inclinacao * 100}vw;
+
+  @return clamp(#{$minFontRem}rem, #{$valorPreferencial}, #{$maxFontRem}rem);
+}
+
+// Usando a função:
+//Parâmetros: construtorClamp( larguraMinima, larguramaxima, tamanhoFontMinimo, tamanhoFontMaximo)
+
+h1 {
+  font-size: construtorClamp(320, 1440, 28, 64);
+  font-weight: 600;
+}
+h2 {
+  font-size: construtorClamp(320, 1440, 28, 48);
+  font-weight: 600;
+}
+h3 {
+  font-size: construtorClamp(320, 1440, 18, 24);
+  font-weight: 500;
+}
+p {
+  font-size: construtorClamp(320, 1440, 16, 18);
+  font-weight: 300;
+}

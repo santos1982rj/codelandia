@@ -3,17 +3,17 @@ feather.replace();
 
 // MENU RESPONSIVO
 
-// const toggle = document.getElementById('toggle');
-// const navList = document.querySelector('.navbar__list');
+const toggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.l-header__list');
 
-// toggle.addEventListener('click', () => {
-//   navList.classList.toggle('active');
-// });
+toggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
 
 //Tabs
 
-const tabTitle = document.querySelectorAll('.tabs h3');
-const tabContent = document.querySelectorAll('.tab-content--item');
+const tabTitle = document.querySelectorAll('.tab__item--title');
+const tabContent = document.querySelectorAll('.tab__item--panel');
 
 tabTitle.forEach((tab, index) => {
   tab.addEventListener('click', () => {
@@ -33,6 +33,6 @@ setTimeout(function () {
   const teste = document.querySelectorAll('.vortex path');
   teste.forEach((item, index) => {
     teste[index].style.animationDelay += index * 0.1 + 's';
-    console.log(teste[index]);
+    console.log((teste[index].style.animationDelay += index * 0.1 + 's'));
   });
 }, 500);

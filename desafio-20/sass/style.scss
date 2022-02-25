@@ -1,0 +1,58 @@
+@import 'abstract/variables';
+@import 'abstract/responsive';
+@import 'abstract/z-index';
+@import 'abstract/unit';
+
+:root {
+  @each $name, $color in $project-colors {
+    --#{$name}: #{$color};
+  }
+}
+
+@import 'base/reset';
+@import 'base/typography';
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--main);
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include media('<SMdesktop') {
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 32px;
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.container {
+  margin-inline: auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+section {
+  padding: 6em 0;
+}
+
+@import 'layout/l-header';
+@import 'layout/l-hero';
+@import 'layout/l-about';
+@import 'layout/l-experience';
+@import 'layout/l-project';

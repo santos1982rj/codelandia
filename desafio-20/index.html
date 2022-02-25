@@ -21,286 +21,271 @@
     <title>Desafio 20 - Hackthon</title>
   </head>
   <body>
-    <main>
-      <!--HEADER--------------------->
-      <header>
-        <nav>
-          <div class="container">
-            <div class="logo">
-              <a href="">Portfolio</a>
-            </div>
-            <div class="links">
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#experience">Experiência</a></li>
-                <li><a href="#project">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-              </ul>
-            </div>
+    <header class="l-header">
+      <nav class="l-header__nav">
+        <a href="./">
+          <img
+            src="svg/logo-commit.svg"
+            alt=""
+            class="l-header__nav--logo"
+            onload="SVGInject(this)"
+          />
+        </a>
+
+        <div class="menu-toggle">
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+          <span class="line-3"></span>
+        </div>
+
+        <ul class="l-header__nav--list">
+          <li class="l-header__nav--item">
+            <a href="#home" class="l-header__nav--link">Home</a>
+          </li>
+          <li class="l-header__nav--item">
+            <a href="#sobre" class="l-header__nav--link">Sobre</a>
+          </li>
+          <li class="l-header__nav--item">
+            <a href="#experiencia" class="l-header__nav--link">Experiência</a>
+          </li>
+          <li class="l-header__nav--item">
+            <a href="#projeto" class="l-header__nav--link">Projeto</a>
+          </li>
+          <li class="l-header__nav--item">
+            <a href="#contato" class="l-header__nav--link">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="l-hero">
+      <div class="container grid">
+        <div class="l-hero__left">
+          <h1><span>Oi, Eu sou</span><br />Vinicius Santos</h1>
+          <p>Front-end Developer & UI Designer</p>
+          <div class="l-hero__btn">
+            <a href="" class="btn"><i data-feather="linkedin"></i> LinkedIn </a>
+            <a href="" class="btn"><i data-feather="github"></i> Github</a>
           </div>
-        </nav>
-        <section id="home" class="home">
-          <div class="container grid-2">
-            <div class="content-left">
-              <h1><span>Oi, Eu sou</span><br />Vinicius Santos</h1>
-              <p>Front-end Developer & UI Designer</p>
-              <div class="btns">
-                <a href="" class="btn btn-pink"
-                  ><i data-feather="linkedin"></i> LinkedIn
-                </a>
-                <a href="" class="btn btn-purple"
-                  ><i data-feather="github"></i> Github</a
-                >
+        </div>
+        <div class="l-hero__right">
+          <img src="svg/vortex.svg" alt="" onload="SVGInject(this)" />
+        </div>
+      </div>
+    </section>
+
+    <section class="l-about" id="sobre">
+      <div class="container grid-2">
+        <div class="l-about__perfil">
+          <img
+            class="l-about__perfil--img"
+            src="img/vinicius-santos-front-end.jpg"
+            alt=""
+          />
+        </div>
+        <div class="l-about__perfil--info">
+          <h2>Sobre Mim</h2>
+          <span>Rio de Janeiro, Brasil</span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            accusamus doloribus nemo aliquam maxime hic necessitatibus similique
+            consectetur quisquam expedita odio, laborum autem doloremque vel!
+          </p>
+          <ul class="l-about__social">
+            <li class="l-about__social--item">
+              <a href="#" class="l-about__social--link"
+                ><img src="svg/twitter.svg" alt="" onload="SVGInject(this)"
+              /></a>
+            </li>
+            <li class="l-about__social--item">
+              <a href="#" class="l-about__social--link"
+                ><img src="svg/twitch.svg" alt="" onload="SVGInject(this)"
+              /></a>
+            </li>
+            <li class="l-about__social--item">
+              <a href="#" class="l-about__social--link"
+                ><img src="svg/youtube.svg" alt="" onload="SVGInject(this)"
+              /></a>
+            </li>
+            <li class="l-about__social--item">
+              <a href="#" class="l-about__social--link"
+                ><img src="svg/figma.svg" alt="" onload="SVGInject(this)"
+              /></a>
+            </li>
+            <li class="l-about__social--item">
+              <a href="#" class="l-about__social--link"
+                ><img src="svg/codepen.svg" alt="" onload="SVGInject(this)"
+              /></a>
+            </li>
+            <li class="l-about__social--item">
+              <a href="#" class="l-about__social--link"
+                ><img src="svg/facebook.svg" alt="" onload="SVGInject(this)"
+              /></a>
+            </li>
+          </ul>
+          <div class="l-about__btn">
+            <a href="" class="btn"
+              ><i data-feather="download"></i> Currículo
+            </a>
+            <a href="" class="btn"><i data-feather="mail"></i> Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- experiencia -->
+
+    <section class="l-experiencia" id="experiencia">
+      <div class="container grid">
+        <h2>Experiência</h2>
+        <div class="tab__container">
+          <div class="tab__item">
+            <h3 class="tab__item--title active">House - Agência Digital</h3>
+            <div class="tab__item--panel active">
+              <div class="tab__item--info">
+                <div class="tab__item--office">
+                  <h3>Desenvolvedor Front-End</h3>
+                  <span>Nov 2021 - Atual</span>
+                </div>
+                <span class="company">House - Agência Digital</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  repellendus odit corrupti ratione repudiandae, nihil incidunt
+                  doloremque, ipsa, officia dolorum eius inventore totam dolor
+                  soluta.
+                </p>
               </div>
             </div>
-            <div class="content-right">
-              <img src="svg/bg-hero.svg" alt="" onload="SVGInject(this)" />
+          </div>
+          <div class="tab__item">
+            <h3 class="tab__item--title">RocketSeat</h3>
+            <div class="tab__item--panel">
+              <div class="tab__item--info">
+                <div class="tab__item--office">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <span>Nov 2021 - Atual</span>
+                </div>
+                <span class="company">RocketSeat</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  repellendus odit corrupti ratione repudiandae, nihil incidunt
+                  doloremque, ipsa, officia dolorum eius inventore totam dolor
+                  soluta.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-      </header>
-      <!--END HEADER--------------------->
-      <section class="about" id="about">
-        <div class="container grid-2">
-          <div class="perfil--img">
-            <img src="img/vinicius-santos-front-end.jpg" alt="" />
+          <div class="tab__item">
+            <h3 class="tab__item--title">C0D3R</h3>
+            <div class="tab__item--panel">
+              <div class="tab__item--info">
+                <div class="tab__item--office">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <span>Nov 2021 - Atual</span>
+                </div>
+                <span class="company">C0D3R</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  repellendus odit corrupti ratione repudiandae, nihil incidunt
+                  doloremque, ipsa, officia dolorum eius inventore totam dolor
+                  soluta.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="perfil--info">
-            <h2>Sobre Mim</h2>
-            <span>Rio de Janeiro, Brasil</span>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              accusamus doloribus nemo aliquam maxime hic necessitatibus
-              similique consectetur quisquam expedita odio, laborum autem
-              doloremque vel!
-            </p>
-            <ul class="menu__social">
-              <li class="menu__social--item">
-                <a href="#" class="menu__social--link"
-                  ><i data-feather="twitter"></i
-                ></a>
-              </li>
-              <li class="menu__social--item">
-                <a href="#" class="menu__social--link"
-                  ><i data-feather="twitch"></i
-                ></a>
-              </li>
-              <li class="menu__social--item">
-                <a href="#" class="menu__social--link"
-                  ><i data-feather="youtube"></i
-                ></a>
-              </li>
-              <li class="menu__social--item">
-                <a href="#" class="menu__social--link"
-                  ><i data-feather="figma"></i
-                ></a>
-              </li>
-              <li class="menu__social--item">
-                <a href="#" class="menu__social--link"
-                  ><i data-feather="codepen"></i
-                ></a>
-              </li>
-              <li class="menu__social--item">
-                <a href="#" class="menu__social--link"
-                  ><i data-feather="facebook"></i
-                ></a>
-              </li>
-            </ul>
-            <div class="btns">
-              <a href="" class="btn btn-pink"
-                ><i data-feather="download"></i> Currículo
-              </a>
-              <a href="" class="btn btn-purple"
-                ><i data-feather="mail"></i> Email</a
-              >
+          <div class="tab__item">
+            <h3 class="tab__item--title">DIO</h3>
+            <div class="tab__item--panel">
+              <div class="tab__item--info">
+                <div class="tab__item--office">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <span>Nov 2021 - Atual</span>
+                </div>
+                <span class="company">Digital Inovattion One</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  repellendus odit corrupti ratione repudiandae, nihil incidunt
+                  doloremque, ipsa, officia dolorum eius inventore totam dolor
+                  soluta.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tab__item">
+            <h3 class="tab__item--title">UDEMY</h3>
+            <div class="tab__item--panel">
+              <div class="tab__item--info">
+                <div class="tab__item--office">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <span>Nov 2021 - Atual</span>
+                </div>
+                <span class="company">UDEMY</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  repellendus odit corrupti ratione repudiandae, nihil incidunt
+                  doloremque, ipsa, officia dolorum eius inventore totam dolor
+                  soluta.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="experience" id="experience">
-        <div class="container grid-1">
-          <h2 class="section-title">Experiência</h2>
-          <div class="tabs">
-            <h3 class="active">Digital House</h3>
-            <h3>Udemy</h3>
-            <h3>Rocket Seat</h3>
-            <h3>C0D3R</h3>
-            <h3>HCODE</h3>
-            <h3>Freelancer</h3>
-          </div>
-          <div class="tab-content">
-            <div class="tab-content--item active">
-              <div class="title-hour">
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                <span>Nov 2021 - Atual</span>
-              </div>
-              <span class="company">Digital House</span>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                consectetur dignissimos similique officia distinctio
-                consequatur.
-              </p>
-            </div>
-            <div class="tab-content--item">
-              <div class="title-hour">
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                <span>Nov 2021 - Atual</span>
-              </div>
-              <span class="company">Udemy</span>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                consectetur dignissimos similique officia distinctio
-                consequatur.
-              </p>
-            </div>
-            <div class="tab-content--item">
-              <div class="title-hour">
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                <span>Nov 2021 - Atual</span>
-              </div>
-              <span class="company">RocketSeat</span>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                consectetur dignissimos similique officia distinctio
-                consequatur.
-              </p>
-            </div>
-            <div class="tab-content--item">
-              <div class="title-hour">
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                <span>Nov 2021 - Atual</span>
-              </div>
-              <span class="company">C0D3R</span>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                consectetur dignissimos similique officia distinctio
-                consequatur.
-              </p>
-            </div>
-            <div class="tab-content--item">
-              <div class="title-hour">
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                <span>Nov 2021 - Atual</span>
-              </div>
-              <span class="company">HCODE</span>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                consectetur dignissimos similique officia distinctio
-                consequatur.
-              </p>
-            </div>
-            <div class="tab-content--item">
-              <div class="title-hour">
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                <span>Nov 2021 - Atual</span>
-              </div>
-              <span class="company">Freelancer</span>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe
-                consectetur dignissimos similique officia distinctio
-                consequatur.
-              </p>
-            </div>
+      </div>
+    </section>
+
+    <!-- projetos -->
+
+    <section class="l-project" id="projeto">
+      <div class="container grid-3">
+        <h2>Meus Projetos</h2>
+        <div class="l-project__box">
+          <img
+            src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
+            alt=""
+          />
+          <h3>Nome do Projeto</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            sapiente, libero ex cupiditate modi iusto?
+          </p>
+          <span>Tecnologias usadas no Projeto</span>
+          <div class="l-project__btn">
+            <a href="#" class="btn"><i data-feather="link"></i> Visualizar</a>
           </div>
         </div>
-      </section>
-      <section class="project" id="project">
-        <div class="container grid-3">
-          <h2 class="section-title">Projetos</h2>
-          <div class="project__box">
-            <img
-              src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
-              alt=""
-            />
-            <h3>Nome do Projeto</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              sapiente, libero ex cupiditate modi iusto?
-            </p>
-            <span>Tecnologias usadas no Projeto</span
-            ><a href="" class="btn btn-purple"
-              ><i data-feather="link"></i> Visualizar</a
-            >
-          </div>
-          <div class="project__box">
-            <img
-              src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
-              alt=""
-            />
-            <h3>Nome do Projeto</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              sapiente, libero ex cupiditate modi iusto?
-            </p>
-            <span>Tecnologias usadas no Projeto</span
-            ><a href="" class="btn btn-purple"
-              ><i data-feather="link"></i> Visualizar</a
-            >
-          </div>
-          <div class="project__box">
-            <img
-              src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
-              alt=""
-            />
-            <h3>Nome do Projeto</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              sapiente, libero ex cupiditate modi iusto?
-            </p>
-            <span>Tecnologias usadas no Projeto</span
-            ><a href="" class="btn btn-purple"
-              ><i data-feather="link"></i> Visualizar</a
-            >
-          </div>
-          <div class="project__box">
-            <img
-              src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
-              alt=""
-            />
-            <h3>Nome do Projeto</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              sapiente, libero ex cupiditate modi iusto?
-            </p>
-            <span>Tecnologias usadas no Projeto</span
-            ><a href="" class="btn btn-purple"
-              ><i data-feather="link"></i> Visualizar</a
-            >
-          </div>
-          <div class="project__box">
-            <img
-              src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
-              alt=""
-            />
-            <h3>Nome do Projeto</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              sapiente, libero ex cupiditate modi iusto?
-            </p>
-            <span>Tecnologias usadas no Projeto</span
-            ><a href="" class="btn btn-purple"
-              ><i data-feather="link"></i> Visualizar</a
-            >
-          </div>
-          <div class="project__box">
-            <img
-              src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
-              alt=""
-            />
-            <h3>Nome do Projeto</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              sapiente, libero ex cupiditate modi iusto?
-            </p>
-            <span>Tecnologias usadas no Projeto</span
-            ><a href="" class="btn btn-purple"
-              ><i data-feather="link"></i> Visualizar</a
-            >
+        <div class="l-project__box">
+          <img
+            src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
+            alt=""
+          />
+          <h3>Nome do Projeto</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            sapiente, libero ex cupiditate modi iusto?
+          </p>
+          <span>Tecnologias usadas no Projeto</span>
+          <div class="l-project__btn">
+            <a href="#" class="btn"><i data-feather="link"></i> Visualizar</a>
           </div>
         </div>
-      </section>
-    </main>
+        <div class="l-project__box">
+          <img
+            src="https://via.placeholder.com/1920x1080?text=Visit+github.com/santos1982rj"
+            alt=""
+          />
+          <h3>Nome do Projeto</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            sapiente, libero ex cupiditate modi iusto?
+          </p>
+          <span>Tecnologias usadas no Projeto</span>
+          <div class="l-project__btn">
+            <a href="#" class="btn"><i data-feather="link"></i> Visualizar</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- <i data-feather="help-circle"></i> -->
     <script src="js/app.js"></script>

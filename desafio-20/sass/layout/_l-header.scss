@@ -1,0 +1,57 @@
+$component-name: 'l-header';
+
+.#{$component-name} {
+  width: 100%;
+  padding: 0 20px;
+
+  &__nav {
+    position: relative;
+    height: 10vh;
+    max-width: 1200px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 64px;
+
+      @include media('<SMdesktop') {
+        display: none;
+      }
+    }
+
+    &--item {
+      display: inline-block;
+    }
+
+    &--link {
+      position: relative;
+      color: var(--color-200);
+      font-size: rem(18);
+      padding: 1rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-image: var(--gradient);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
