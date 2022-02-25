@@ -629,4 +629,190 @@ section {
           mask: linear-gradient(var(--main), var(--main)) padding-box, linear-gradient(var(--main), var(--main));
   -webkit-mask-composite: xor;
           mask-composite: exclude;
+}
+
+.l-contact .container.grid-2 {
+  gap: 64px;
+}
+.l-contact .container.grid-2 h2 {
+  grid-column: 1/-1;
+  color: var(--color);
+}
+.l-contact__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 32px;
+}
+.l-contact__info address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+}
+.l-contact__info span {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color);
+}
+.l-contact__info p {
+  color: var(--color-200);
+}
+.l-contact__form {
+  width: 100%;
+}
+.l-contact__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+}
+.l-contact__form input[type=text],
+.l-contact__form input[type=email] {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  height: 32px;
+  padding: 1.5rem;
+  color: var(--color-200);
+  font-size: 1.125rem;
+}
+.l-contact__form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  padding: 1.5rem;
+  color: var(--color-200);
+  font-size: 1.125rem;
+}
+.l-contact__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 48px;
+}
+.l-contact__btn .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  color: var(--color);
+  font-weight: 600;
+  font-size: 1.125rem;
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.l-contact__btn .btn:hover {
+  -webkit-box-shadow: 0px 51px 80px rgba(249, 163, 63, 0.08), 0px 15.375px 24.1177px rgba(249, 163, 63, 0.0521), 0px 6.38599px 10.0172px rgba(249, 163, 63, 0.04), 0px 2.30969px 3.62304px rgba(249, 163, 63, 0.028);
+          box-shadow: 0px 51px 80px rgba(249, 163, 63, 0.08), 0px 15.375px 24.1177px rgba(249, 163, 63, 0.0521), 0px 6.38599px 10.0172px rgba(249, 163, 63, 0.04), 0px 2.30969px 3.62304px rgba(249, 163, 63, 0.028);
+}
+.l-contact__btn .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient) border-box;
+  border: inherit;
+  border-radius: inherit;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, from(var(--main)), to(var(--main))) padding-box, -webkit-gradient(linear, left top, left bottom, from(var(--main)), to(var(--main)));
+  -webkit-mask: linear-gradient(var(--main), var(--main)) padding-box, linear-gradient(var(--main), var(--main));
+          mask: -webkit-gradient(linear, left top, left bottom, from(var(--main)), to(var(--main))) padding-box, -webkit-gradient(linear, left top, left bottom, from(var(--main)), to(var(--main)));
+          mask: linear-gradient(var(--main), var(--main)) padding-box, linear-gradient(var(--main), var(--main));
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+footer {
+  background-color: #090909;
+}
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+  color: var(--color-200);
+  font-size: 1rem;
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
+  }
+}
+footer .container p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+footer .container p svg {
+  fill: tomato;
+}
+footer .container p span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }/*# sourceMappingURL=style.css.map */

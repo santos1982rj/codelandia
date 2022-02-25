@@ -22,6 +22,7 @@ body {
   position: relative;
   background-color: var(--main);
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -56,3 +57,38 @@ section {
 @import 'layout/l-about';
 @import 'layout/l-experience';
 @import 'layout/l-project';
+@import 'layout/l-contact';
+
+footer {
+  background-color: #090909;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+
+    color: var(--color-200);
+    font-size: rem(16);
+    font-weight: 300;
+
+    @include media('<tablet') {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    p {
+      display: flex;
+      gap: 10px;
+
+      svg {
+        fill: tomato;
+      }
+      span {
+        background: var(--gradient);
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}
