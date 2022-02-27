@@ -3,17 +3,34 @@ $component-name: 'l-header';
 .#{$component-name} {
   width: 100%;
   padding: 0 20px;
+  position: relative;
 
   &__nav {
-    position: relative;
-    height: 10vh;
+    height: 6rem;
     max-width: 1200px;
     margin-inline: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    .menu-toggle {
+      display: none;
+      @include media('<SMdesktop') {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        z-index: 10;
+      }
+
+      span {
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-200);
+      }
+    }
     &--logo {
       max-width: 250px;
     }
@@ -25,7 +42,23 @@ $component-name: 'l-header';
       gap: 64px;
 
       @include media('<SMdesktop') {
-        display: none;
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        z-index: 9999;
+        width: 60%;
+        height: calc(100vh - 6rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        background-color: var(--main-200);
+      }
+      &.active {
+        transform: translateX(0) !important;
       }
     }
 

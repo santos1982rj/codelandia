@@ -2,15 +2,27 @@
 feather.replace();
 
 // THEME Style
+const toggleTheme = document.querySelector('.toggle-theme');
+
+toggleTheme.addEventListener('click', () => {
+  document.body.classList.toggle('lighttheme');
+});
 
 // MENU RESPONSIVO
 
 const toggle = document.querySelector('.menu-toggle');
-const navList = document.querySelector('.l-header__list');
+const navList = document.querySelector('.l-header__nav--list');
+
+const navLinks = document.querySelectorAll('.l-header__nav--link');
 
 toggle.addEventListener('click', () => {
   navList.classList.toggle('active');
 });
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener('click', function () {
+    navList.classList.toggle('active');
+  });
+}
 
 //Tabs
 
@@ -44,10 +56,4 @@ const scrollTop = document.querySelector('.scroll-top');
 
 scrollTop.addEventListener('click', () => {
   window.scrollTo(0, 0);
-});
-
-const toggleTheme = document.querySelector('.toggle-theme');
-
-toggleTheme.addEventListener('click', () => {
-  document.body.classList.toggle('lighttheme');
 });
